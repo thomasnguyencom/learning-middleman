@@ -55,6 +55,29 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
+  activate :deploy do |deploy|
+    deploy.method = :rsync
+    deploy.user = "root"
+    deploy.host = "66.175.208.38"
+    deploy.path = "/usr/share/nginx"
+    # deploy.port = 5309 # default is 22
+    # deploy.clean = true # to remove orphaned files or directories
+  end
+  
+  activate :deploy do |deploy|
+    deploy.method = :git
+    # deploy.remote = "some-other-remote-name"
+    # deploy.branch = "some-other-branch-name"
+  end
+  
+  activate :deploy do |deploy|
+    deploy.method = :ftp
+    deploy.host = "66.175.208.38:25"
+    deploy.user = "ftpuser"
+    deploy.password = "s3cr3t"
+    deploy.path = "/usr/share/nginx"
+  end
+  
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
