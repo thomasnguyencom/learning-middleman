@@ -83,12 +83,14 @@ activate :deploy do |deploy|
   deploy.path = "/usr/share/nginx"
   # deploy.port = 5309 # default is 22 # optional
   # deploy.clean = true # to remove orphaned files or directories # optional
+  # deploy.after_build = true #optional, default false
 end
 
 # activate :deploy do |deploy|
   # deploy.method = :git
   # deploy.remote = "some-other-remote-name" # optional
   # deploy.branch = "some-other-branch-name" # optional
+  # deploy.after_build = true #optional, default false
 # end
 
 # activate :deploy do |deploy|
@@ -97,4 +99,5 @@ end
   # deploy.user = "ftpuser"
   # deploy.password = "s3cr3t"
   # deploy.path = "/usr/share/nginx"
+  # deploy.after_build = true #optional, default false
 # end
