@@ -45,3 +45,7 @@ Configure/Start up the nginx server
 2. By default, nginx will use the "default" file which points to the /usr/share/nginx/www folder. Change the reference to /usr/share/nginx/build
 3. ~ service nginx start
 4. Open browser to http://<server> # yup, that easy
+
+Build or Deploy!
+middleman build [--clean]
+middleman deploy [--clean]
